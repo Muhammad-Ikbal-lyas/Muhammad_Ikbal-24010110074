@@ -74,7 +74,7 @@ class Fakultas extends CI_Controller {
 
 			if ($this->form_validation->run() === TRUE) {
 				$data = [
-					'fakultas_name' => $formulir['fakultas_name'],
+    				'fakultas_name' => $this->input->post('fakultas_name'),
 				];
 
 				$this->FakultasModel->update($id, $data);
